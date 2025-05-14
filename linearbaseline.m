@@ -1,13 +1,13 @@
 % smoothening data and linear baseline subtraction 
 % for Renishaw Raman spectrum in 633 grating
-% change parametres if x length is not 1015
-%input x 
+% change parametres if xx length is not 1015
+%input xx 
 %input y (stacked or arrayed) as data 
 
 if size(data, 2) == 1
 n = size (data,1);
 raw_data = [];
-grouped_data = cell(ceil(n/1015), 1); xx =x;
+grouped_data = cell(ceil(n/1015), 1); 
 for i = 1:ceil(n/1015)
     start_idx = (i-1)*1015 + 1; 
     end_idx = min(i*1015, n); 
@@ -122,7 +122,7 @@ result(isnan(result)) = 0;
 result((result<0)) = 0;
 result1 = result (352:1015,:);
 result1 = result1(1:637,:);
-xx=x; x1=xx(352:1015); x1=x1(1:637);
+x1=xx(352:1015); x1=x1(1:637);
 
 clear m* range* start* temp* neg* tbl_temp value x_interp y_interp endIdx* data_temp index fit*
 figure;
