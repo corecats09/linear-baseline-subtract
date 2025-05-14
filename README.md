@@ -1,3 +1,5 @@
+Upload the codes and data to your MATLAB workspace. 
+
 The test dataset is a stacked dataset from WiRE Raman spectroscopy mapping data collection using 1200l/mm (780/633) grating. 
 This will generate an output with the length of 1015 per Raman spectrum in a .txt file.
 In the .txt file, the spectrum is stacked in the 4th column(You can still use this code for a single spectrum acquisition).
